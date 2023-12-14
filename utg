@@ -1,0 +1,921 @@
+Vidyalankar School of Information Technology
+Next Generation Technologies
+Practical #1
+Name Sandeep Jain Roll Number 21302C0058
+Subject/Course: NGT
+Topic jQuery
+jQuery Basic & Events
+Apply following CSS properties to all P elements on the click of the button.
+a. Font Size – 20
+b. Align – center
+c. Text Color – red
+d. Background Color - black
+Code
+<!DOCTYPE html>
+<html ><head>
+ <script src="jquerymin.js">
+ </script>
+ <script>
+ $(document).ready(function(){
+ $("#btn1").click(function(){
+ $("p").css({"font-size":20,"color":"red","text-align":"center","background-color":"black"});
+ });
+ });
+ </script>
+</head>
+<body>
+ <p>Name Sandeep Jain & Roll no=21302C0058</p>
+ <p>Chembur Mumbai</p>
+ <button id="btn1">Apply css</button>
+</body>
+</html>
+Output
+Vidyalankar School of Information Technology
+jQuery Selectors, jQuery Hide and Show effects
+Write a jQuery code to hide and show all elements belonging to class “c1”.
+Code
+<html>
+<head>
+ <script src="jquerymin.js">
+ </script>
+ <script>
+ $(document).ready(function() {
+ $("#btn1").click(function() {
+ $(".C1").hide(2000);
+ });
+ $("#btn2").click(function() {
+ $(".C1").show(2000);
+ });
+ $("#btn3").click(function() {
+ $(".C1").toggle(2000);
+ });
+ });
+ </script>
+</head>
+<body>
+ <p class="C1">Sandeep Jain Roll no 21302C0058</p>
+ <p class="C1"> Chembur Mumbai</p>
+ <input type="button" value="hide" id="btn1" />
+Vidyalankar School of Information Technology
+ <input type="button" value="show" id="btn2" />
+ <input type="button" value="toggle" id="btn3" />
+</body>
+</html>
+Output
+Vidyalankar School of Information Technology
+jQuery fading effects, jQuery Sliding effects
+Write a jQuery code to apply all fading and sliding effects on the element having id “t1”.
+Code
+<html>
+<head>
+ <script src="jquerymin.js"></script>
+ <script>
+ $(document).ready(function() {
+ $("#btn1").click(function() {
+ $("#t1").slideUp(2000);
+ })
+ $("#btn2").click(function() {
+ $("#t1").slideDown(2000);
+ })
+ $("#btn3").click(function() {
+ $("#t1").slideToggle(2000);
+ })
+ $("#btn4").click(function() {
+ $("#t1").fadeIn(2000);
+ })
+ $("#btn5").click(function() {
+ $("#t1").fadeOut(2000);
+ })
+ $("#btn6").click(function() {
+ $("#t1").fadeToggle(2000);
+ })
+ $("#btn7").click(function() {
+ $("#t1").fadeTo(2000, 0.1);
+ })
+ });
+ </script>
+</head>
+<body>
+ <p id="t1">Sandeep Jain roll no 21302C0058 Address Chembur Mumbai</p>
+ <button id="btn1">slideUp</button>
+Vidyalankar School of Information Technology
+ <button id="btn2">slideDown</button>
+ <button id="btn3">slideToggle</button>
+ <button id="btn4">fadeIn</button>
+ <button id="btn5">fadeOut</button>
+ <button id="btn6">fadeToggle</button>
+ <button id="btn7">fadeTo</button>
+</body>
+</html>
+Output
+Next Generation Technologies
+Practical #2
+Name Sandeep Jain Roll Number 21302C0058
+Subject/Course: NGT
+Topic jQuery Advanced
+jQuery Animations and Callback
+Write a jQuery code to move the first division element to the right side by 200px also set the color red and
+font size 30px of the division content. After applying all CSS properties display a message “All CSS
+effects applied”.
+Implement the code on the click of the button.
+Vidyalankar School of Information Technology
+code
+<html>
+ <head>
+ <title> Practical 2</title>
+ <script src="jquery-3.5.1.min.js"></script>
+ <script>
+ $(document).ready(function()
+ {
+ $("#b1").click(function() {
+ $("div").first().css({"background-color":"blue","color":"yellow",});
+ $("div").first().animate({"font-size":"30px","marginLeft":"200px"},function(){ alert('All css effects applied');
+ });
+ });
+ });
+ </script>
+ </head>
+ <body>
+ <div>
+ <h1> Division B</h1>
+ <p> Sandeep jain </p>
+ </div>
+ <div>
+ <p> BSCIT </p>
+</div>
+ <div>
+ <p>VSIT</p>
+ </div>
+ <input type="button" value="Change" id="b1"/>
+ </body>
+</html>
+Output
+Vidyalankar School of Information Technology
+jQuery Chaining
+Implement chaining technique to apply following effects on the 2nd paragraph on the page
+a. Add css class with following properties – color, align, underlined
+b. fadeTo
+c. slideup
+Apply the above effects on the click of a button.
+Code
+<html>
+ <head>
+ <title> Practical 2</title>
+ <script src="jquery-3.5.1.min.js"></script>
+ <script>
+ $(document).ready(function()
+ {
+ $("#b1").click(function()
+ { $("p").eq(1).css({"color":"red","text-align":"center","textdecoration":"underline"}).fadeTo(3000,0.3).slideUp(2000);
+ });
+ });
+ </script>
+ </head>
+ <body>
+ <div>
+ <h1> Division B</h1>
+ <p> Sandeep Jain </p>
+ </div>
+ <div>
+ <p>VSIT</p>
+ </div>
+ <input type="button" value="Chaining" id="b1"/>
+ </body>
+</html>
+Output
+Vidyalankar School of Information Technology
+jQuery DOM Manipulation
+Implement following operations on the click of a button
+a. Insert your name in the first textbox and display it on the page in bold
+b. Insert your roll no in the second textbox and display it next to your name
+c. Remove the line which displays your name and roll no
+Code
+<html>
+<head>
+ <title>Practical 2</title>
+ <script src="jquery-3.5.1.min.js"></script>
+ <script>
+ $(document).ready(function()
+ {
+ $("#b1").click(function(){
+ var name= $("#t1").val();
+ var rollno= $("#t2").val();
+ $("#op").html("<b>" + name + "</b>");
+ $("#op").append("<p>Roll No: " + rollno+ "</p>");
+ });
+ $("#b2").click(function(){
+ $("#op").remove();
+ });
+ });
+ </script>
+</head>
+Vidyalankar School of Information Technology
+<body>
+ <input type="text" id="t1" placeholder="Enter your name"><br>
+ <input type="text" id="t2" placeholder="Enter your Roll number">
+ <input type="button" id="b1" value="Submit">
+ <input type="button" id="b2" value="Remove">
+ <div id="op"></div>
+</body>
+</html>
+Output
+Next Generation Technologies
+Practical #3
+Name Sandeep Jain Roll Number 21302C0058
+Subject/Course: NGT
+Topic JSON
+Vidyalankar School of Information Technology
+Parsing JSON
+Create a JSON file and parse it.
+JSON file must contain 5 Students data with following attributes
+ Name
+ Roll No
+ Address
+ Gender
+ Email Id
+ Mobile No
+The output of the program must print details of all the students.
+Code
+File Student.json
+data='[{"Name":"Sandeep","Roll_No":"58","Address":"Chembur","Gender":"Male","Email_Id":
+"sandeep@gmail.com","Mobile_No":"9833527454"},{"Name":"Sandeepjain","Roll_No":"21302C00
+58","Address":"Kurla","Gender":"Male","Email_Id":"sandeepja@gmail.com","Mobile_No":"983
+3527454"},{"Name":"Tajun","Roll_No":"60","Address":"Dadar","Gender":"Male","Email_Id":"
+tajun@gmail.com","Mobile_No":"9833557454"},{"Name":"Sudhansu","Roll_No":"01","Address":
+"Dadar","Gender":"Male","Email_Id":"sudhansu@gmail.com","Mobile_No":"8033527454"},{"Nam
+e":"Sahil","Roll_No":"22","Address":"Wadal","Gender":"Male","Email_Id":"sahil@gmail.com
+","Mobile_No":"9833007454"}]'
+Main file .html
+<!DOCTYPE html>
+<html >
+<head>
+ <title>Practical 3</title>
+ <script src="student.json"></script>
+</head>
+<body>
+ <script>
+ var arr = JSON.parse(data);
+ for(var a in arr){
+ document.write("Name: "+ arr[a].Name+"<br>");
+ document.write("Roll NO: " + arr[a].Roll_No + "<br/>");
+ document.write("Address: " + arr[a].Address + "<br/>");
+ document.write("Gender: " + arr[a].Gender + "<br/>");
+ document.write("Email id: " + arr[a].Email_Id + "<br/>");
+ document.write("Mobile Number: " + arr[a].Mobile_No + "<br/><br/>");
+ document.write("<hr/><br/>")
+ }
+ </script>
+</head>
+<body>
+</body>
+</html>
+Vidyalankar School of Information Technology
+Output
+Vidyalankar School of Information Technology
+Persisting JSON
+Create a JSON file and persist it in any database.
+Store the JSON created in the above question in the collection student under college database.
+Code
+{"Name":"Sandeep","Roll_No":"58","Address":"Chembur","Gender":"Male","Email_Id":"sandee
+p@gmail.com","Mobile_No":"9833527454"}
+{"Name":"Sandeepjain","Roll_No":"21302C0058","Address":"Kurla","Gender":"Male","Email_I
+d":"sandeepja@gmail.com","Mobile_No":"9833527454"}
+{"Name":"Tajun","Roll_No":"60","Address":"Dadar","Gender":"Male","Email_Id":"tajun@gmai
+l.com","Mobile_No":"9833557454"}
+{"Name":"Sudhansu","Roll_No":"01","Address":"Dadar","Gender":"Male","Email_Id":"sudhans
+u@gmail.com","Mobile_No":"8033527454"}
+{"Name":"Sahil","Roll_No":"22","Address":"Wadal","Gender":"Male","Email_Id":"sahil@gmai
+l.com","Mobile_No":"9833007454"}
+Output
+Vidyalankar School of Information Technology
+mongoimport –db college –-collection student –-file”path”
+Vidyalankar School of Information Technology
+Next Generation Technologies
+Practical #4
+Name Sandeep Jain Roll Number 21302C0058
+Subject/Course: NGT
+Topic MongoDB Basics
+MongoDB Basic Queries
+ Create a database of your name
+ Create a “Student” collection
+ Insert at least 3 documents having following keys
+o roll_no
+o name
+o gender
+o age
+o email_id
+ Display all records.
+ Update an email id of a student having “roll_no = 2” to “student2@gmail.com”
+ Delete record of a student having “roll_no = 1”.
+ Drop the collection “Student”
+ Drop the created database
+Starte mongo
+Create database
+Show database
+Insert key and values
+db.student.insert({"roll_no":"58","name":"sandeep","gender":"male","age":"18","email_id":"sandeep@gmail.co
+m"})
+> db.student.insert({"roll_no":"60","name":"tanju","gender":"male","age":"20","email_id":"tanju@gmail.com"})
+Vidyalankar School of Information Technology
+>
+db.student.insert({"roll_no":"01","name":"sushansu","gender":"male","age":"22","email_id":"sudhandu@gmail.c
+om"})
+> db.use.find().preety()
+Display all record
+Code
+db.student.find().pretty()
+Output
+ Update an email id of a student having “roll_no = 2” to “student2@gmail.com”
+Code
+db.student.update({"Roll_no":"60"},{$set:{"Email_id":"student2@gmail.com"}})
+Output
+Vidyalankar School of Information Technology
+ Delete record of a student having “roll_no = 1”.
+Code
+delete({"Roll_no":"10"})
+Output
+ Drop the collection “Student”
+Code
+db.student.drop()
+Output
+ Drop the created database
+Code
+db.drop.sandeep
+Output
+Vidyalankar School of Information Technology
+Create a Collection Employee with the following Fields
+(Eid,Ename,Sal,City,Hobbies) where hobbies is an array perform the Following Queries based on the collection.
+ Insert at least five records
+ Display first 3 employee’s data
+ Update salary of all employees to 50000 who belongs to Mumbai City
+ Update hobbies to “drawing” and “acting” of employee id “2”
+ Return number of employees who belongs to Pune City
+Create a Collection Employee
+Code
+Use sandeep
+Output
+ Insert at least five records
+Code
+db.emp.insertMany([{"Eid":"01","Ename":"emp1","Sal":"1000","City":"Mumbai","Hobbies":["Reading","Singing"]},{"E
+id":"02","Ename":"emp2","Sal":"2000","City":"Mumbai","Hobbies":["Dancing","Running"]},{"Eid":"03","Ename":"em
+p3","Sal":"3000","City":"Nagpur","Hobbies":["Singing","Baseball"]},{"Eid":"04","Ename":"emp4","Sal":"4000","City":"
+Pune","Hobbies":["Football","Boxing"]},{"Eid":"05","Ename":"emp5","Sal":"5000","City":"Pune","Hobbies":["Studying
+","Trading"]}])
+Output
+Vidyalankar School of Information Technology
+ Display first 3 employee’s data
+Code
+db.emp.find().limit(3)
+Output
+ Update salary of all employees to 50000 who belongs to Mumbai City
+Code
+db.emp.updateMany({"City":"Mumbai"},{$set:{"Sal":"50000"}})
+Output
+ Update hobbies to “drawing” and “acting” of employee id “2”
+Code
+db.emp.update({"Eid":"02"},{$set:{"Hobbies":["Drawing","Acting"]}})
+Output
+Vidyalankar School of Information Technology
+ Return number of employees who belongs to Pune City
+Code
+db.emp.find({"City":"Pune"}).count()
+Output
+Next Generation Technologies
+Practical #5
+Name Sandeep Jain Roll Number 21302C0058
+Subject/Course: NGT
+Topic MongoDB Advanced Search Queries
+MongoDB Advanced Search Queries
+Import data from restaurant.json file to restaurant collection under mydb database
+Perform the following operations on the Restaurant data
+1. Write a MongoDB query to display all the documents in the collection restaurants.
+2. Write a MongoDB query to display the fields restaurant_id, name, borough and zip code,
+but exclude the field _id for all the documents in the collection restaurant.
+3. Write a MongoDB query to display the first 5 restaurant which is in the borough Bronx.
+4. Write a MongoDB query to find the restaurants that achieved a score, more than 80 but less
+than 100
+5. Write a MongoDB query to find the restaurants which locate in latitude value less than -
+95.754168
+6. Write a MongoDB query to find the restaurants which do not prepare any cuisine of
+'American'
+and achieved a score more than 70 and located in the longitude less than -65.754168.
+7. Write a MongoDB query to find the restaurants which do not prepare any cuisine of
+'American '
+and achieved a grade point 'A' not belongs to the borough Brooklyn. The document must be
+displayed according to the cuisine in descending order.
+8. Write a MongoDB query to find the restaurant Id, name, borough and cuisine for those
+restaurants which contain 'ces' as last three letters for its name.
+9. Write a MongoDB query to find the restaurant Id, name, borough and cuisine for those
+restaurants which contain 'Wil' as first three letters for its name
+10. Write a MongoDB query to find the restaurant Id, name, borough and cuisine for those
+restaurants which contain 'Reg' as three letters somewhere in its name
+Vidyalankar School of Information Technology
+11. Write a MongoDB query to find the restaurants which belong to the borough Bronx and
+prepared either American or Chinese dish.
+12. Write a MongoDB query to find the restaurant Id, name, borough and cuisine for those
+restaurants which belong to the borough Staten Island or Queens or Bronx or Brooklyn
+13. Write a MongoDB query to arranged the name of the cuisine in ascending order and for that
+same cuisine borough should be in descending order
+14. Write a MongoDB query to display all the addresses that contains the street.
+15. Write a MongoDB query which will select all documents in the restaurants collection where
+the coord field value is Double
+16. Write a MongoDB query which will select the restaurant Id, name and grades for those
+restaurants which returns 0 as a remainder after dividing the score by 7.
+17. Write a MongoDB query to find the restaurant Id, name, and grades for those restaurants
+which achieved a grade of "A" and scored 11 on an ISODate "2014- 08-11T00:00:00Z"
+among many of survey dates.
+18. Write a MongoDB query to find the restaurant Id, name, address and geographical location for
+those restaurants where 2nd element of coord array contains a value which is more than 42
+and upto 52.
+mongoimport --db mydb --collection restaurant --file "D:\NGTpract\restaurants.json"
+1 Write a MongoDB query to display all the documents in the collection restaurants.
+Code . db.restaurant.find().pretty()
+2 Write a MongoDB query to display the fields restaurant_id, name, borough and zip code, but exclude the
+field _id for all the documents in the collection restaurant.
+Code
+.db.restaurant.find({},{restaurant_id:1,name:1, borough:1, "address.zipcode":1,_id:0}).pretty()
+Vidyalankar School of Information Technology
+3 Write a MongoDB query to display the first 5 restaurant which is in the borough Bronx.
+db.restaurant.find({borough: "Bronx"}).limit(5).pretty()
+4 Write a MongoDB query to find the restaurants that achieved a score, more than 80 but less than 100
+Code
+db.restaurant.find({"grades.score":{ $gt:80, $lt:100 }}).pretty()
+Vidyalankar School of Information Technology
+5 Write a MongoDB query to find the restaurants which locate in latitude value less than -95.754168
+.
+Code
+db.restaurant.find({"address.coord":{$lt:-95.754168}}).pretty()
+6. Write a MongoDB query to find the restaurants which do not prepare any cuisine of 'American' and
+achieved a score more than 70 and located in the longitude less than -65.754168.
+Code
+db.restaurant.find({"cuisine":{$ne:"American "},"grades.score":{$gt:70},"address.coord":{$lt:-65.754168}}).pretty()
+7. Write a MongoDB query to find the restaurants which do not prepare any cuisine of 'American ' and
+achieved a grade point 'A' not belongs to the borough Brooklyn. The document must be displayed according
+to the cuisine in descending order.
+Code
+db.restaurant.find({"cuisine":{$ne:"American "},"grades.grade":"A","borough":{$ne:"Brooklyn"}}).sort({"cuisine":-1}).pretty()
+8 Write a MongoDB query to find the restaurant Id, name, borough and cuisine for those restaurants which
+contain 'ces' as last three letters for its name.
+Vidyalankar School of Information Technology
+Code
+db.restaurant.find({"name":{$regex:/ces$/i}},{restaurant_id:1,name:1, borough:1, "cuisine":1,_id:0}).pretty()
+9. Write a MongoDB query to find the restaurant Id, name, borough and cuisine for those restaurants which
+contain 'Wil' as first three letters for its name
+code
+db.restaurant.find({"name":{$regex:/^Wil/i}},{restaurant_id:1,name:1, borough:1, "cuisine":1,_id:0}).pretty()
+10. Write a MongoDB query to find the restaurant Id, name, borough and cuisine for those restaurants
+which contain 'Reg' as three letters somewhere in its name
+Code
+db.restaurant.find({"name":{$regex:/.*Reg*./i}},{restaurant_id:1,name:1, borough:1, "cuisine":1,_id:0}).pretty()
+11.a Write a MongoDB query to find the restaurants which belong to the borough Bronx and prepared
+either American or Chinese dish.
+Code
+db.restaurant.find({"borough":"Bronx",$or:[{cuisine:"American "},{cuisine:"Chinese"}]}).pretty()
+Vidyalankar School of Information Technology
+11.b Write a MongoDB query to find the restaurants which belong to the borough Bronx and prepared
+either American or Chinese dish.
+code
+db.restaurants.find({"borough":"Bronx","cuisine":{$in:["American ","Chinese"]}}).pretty()
+12 Write a MongoDB query to find the restaurant Id, name, borough and cuisine for those restaurants which
+belong to the borough Staten Island or Queens or Bronx or Brooklyn
+code
+db.restaurant.find({"borough":{$in:["Staten Island","Queens","Bronx","Brooklyn"]}},{restaurant_id:1,name:1,
+borough:1,cuisine:1, _id:0}).pretty()
+13. Write a MongoDB query to arranged the name of the cuisine in ascending order and for that same
+cuisine borough should be in descending order
+Code
+db.restaurant.find().sort({"cuisine":1,"borough":-1}).pretty()
+Vidyalankar School of Information Technology
+14. Write a MongoDB query to display all the addresses that contains the street.
+code
+db.restaurant.find({"address.street":{$exists:true}}).pretty()
+15. Write a MongoDB query which will select all documents in the restaurants collection where the coord
+field value is Double
+Code
+db.restaurants.find({"address.coord":{$type:1}}).pretty()
+16. Write a MongoDB query which will select the restaurant Id, name and grades for those restaurants which
+returns 0 as a remainder after dividing the score by 7.
+code
+db.restaurants.find({"grades.score":{$mod:[7,0]}},{restaurants_id:1,name:1,grades:1,_id:0}).pretty()
+17. Write a MongoDB query to find the restaurant Id, name, and grades for those restaurants which
+achieved a grade of "A" and scored 11 on an ISODate "2014- 08-11T00:00:00Z" among many of survey dates
+Code
+db.restaurant.find({"grades.grade":"A","grades.score":11,"grades.date":ISODate("2014-08-
+11T00:00:00Z")},{"restaurant_id":1,"name":1,"grades":1}).pretty()
+Vidyalankar School of Information Technology
+18 Write a MongoDB query to find the restaurant Id, name, address and geographical location for those
+restaurants where 2nd element of coord array contains a value which is more than 42 and upto 52.
+Code
+db.restaurant.find({"address.coord.1":{$gt:42,$lte:52}},{"restaurant_id":1,"name":1,"address":1,"address.coord":1,_id:0}).pr
+etty()
+Next Generation Technologies
+Practical #6
+Name Sandeep Jain Roll Number 21302C0058
+Subject/Course: NGT
+Topic MongoDB Aggregate Queries
+MongoDB Aggregate Queries
+Create a Collection Employee with the following Fields (Eid, Ename, Sal, City, hobbies) where hobbies are an array
+perform the Following Queries based on the collection.
+A. Write a MongoDB query to use sum, avg, min and max expression.
+B. Write a MongoDB query to use push and addToSet expression.
+C. Write a MongoDB query to use first and last expression.
+Create a Collection Employee with the following Fields (Eid, Ename, Sal, City,
+hobbies) where hobbies are an array perform the Following Queries based on
+the collection.
+Vidyalankar School of Information Technology
+Code
+use mydb
+show dbs
+db.employee.insert({"Eid":1,"Ename":"Sandeep","Sal":999999,"City":"Mumbai","Hobbies":["cricket","football"]})
+db.employee.insert({"Eid":2,"Ename":"Sudhansu","Sal":999,"City":"Mumbai","Hobbies":["cricket","football"]})
+db.employee.insert({"Eid":3,"Ename":"Tanuj","Sal":9999,"City":"Pune","Hobbies":["cricket","football"]})
+db.employee.insert({"Eid":4,"Ename":"Sandeepjain","Sal":99999,"City":"Pune","Hobbies":["cricket","football"]})
+db.employee.insert({"Eid":5,"Ename":"Sahil","Sal":9999,"City":"Pune","Hobbies":["cricket","football"]})
+db.employee.insert({"Eid":6,"Ename":"Siddesh","Sal":99,"City":"Nashik","Hobbies":["cricket","football"]})
+db.employee.insert({"Eid":7,"Ename":"Jenish","Sal":9999999,"City":"Nashik","Hobbies":["cricket","football"]})
+db.employee.insert({"Eid":8,"Ename":"Jatin","Sal":9999999,"City":"Nashik","Hobbies":["cricket","football"]})
+Output
+A. Write a MongoDB query to use sum, avg, min and max expression.
+1)Sum
+Code
+db.employee.aggregate({$group:{_id:"$City",sum_Sal:{$sum:"$Sal"}}})
+Output
+2)Avg
+Code
+db.employee.aggregate({$group:{_id:"$City",avg_Sal:{$avg:"$Sal"}}})
+Output
+3)Min
+Code
+db.employee.aggregate({$group:{_id:"$City",min_Sal:{$min:"$Sal"}}})
+Output
+4)Max
+Code
+Vidyalankar School of Information Technology
+db.employee.aggregate({$group:{_id:"$City",max_Sal:{$max:"$Sal"}}})
+Output
+B. Write a MongoDB query to use push and addToSet expression.
+1)Push
+Code
+db.employee.aggregate({$group:{_id:"$City",push_Sal:{$push:"$Sal"}}})
+Output
+2)addToSet
+Code
+db.employee.aggregate({$group:{_id:"$City",addToSet_Sal:{$addToSet:"$Sal"}}})
+Output
+C. Write a MongoDB query to use first and last expression.
+1)First
+Code
+db.employee.aggregate({$group:{_id:"$City",first_Sal:{$first:"$Sal"}}})
+Output
+2)Last
+Code
+db.employee.aggregate({$group:{_id:"$City",last_Sal:{$last:"$Sal"}}})
+Output
+Next Generation Technologies
+Practical #7
+Vidyalankar School of Information Technology
+Name Sandeep Jain Roll Number 21302C0058
+Subject/Course: NGT
+Topic Replication,Backup and Restore
+Replication, Backup and Restore
+a Write a MongoDB query to create Replica of existing database
+b Write a MongoDB query to create a backup of existing database.
+c Write a MongoDB query to restore database from the backup.
+Steps:
+1 start mongod -replSet mydata -logpath \data\rs1\1.log --dbpath \data\rs1 --port 27018
+2 start mongod -replSet mydata -logpath \data\rs2\2.log --dbpath \data\rs2 --port 27019
+3 start mongod -replSet mydata -logpath \data\rs3\3.log --dbpath \data\rs3 --port 27020
+4new command prompt
+5 mongo --port 27018
+Vidyalankar School of Information Technology
+6 config =
+{_id:"mydata",members:[{_id:0,host:"localhost:27018"},{_id:1,host:"localhost:27019"},{_id:2,host:"localhost:270
+20"}]}
+7 rs.initiate(config)
+8 rs.status()
+9 use prac7
+Vidyalankar School of Information Technology
+10 show collections
+11 use prac7
+12 db.stud.insert({"name":"sandeep","rno":"58"})
+13 db.stud.insert({"name":"sudhansu","rno":"01"})
+14 db.stud.find()
+New command prompt
+15 start mongo port –27019
+New mongo start
+Vidyalankar School of Information Technology
+16 rs.slaveOk()
+17 show dbs
+18 use prac7
+19 show collections
+20 db.stud.find().pretty()
+Vidyalankar School of Information Technology
+New command prompt
+21 db.stud.insert({"name":"sahil","rno":"22"})
+new data in not allow
+22 start mongo –port 27020
+In mongodb cmd type:
+23 rs.slaveOk()
+24 show dbs
+Vidyalankar School of Information Technology
+25 use prac7
+26 show collections
+27 db.stud.find().pretty()
+28 db.stud.insert({"name":"sahil","rno":"22"})
+new data in not allow
+b Write a MongoDB query to create a backup of existing database.
+Vidyalankar School of Information Technology
+New mongo
+use sandeep
+db.stud.insert({"name":"sandeep","rno":"58"})
+db.stud.insert({"name":"sudhansu","rno":"01"})
+mongodump -d sandeep -o c:/data/vsit
+c Write a MongoDB query to restore database from the backup
+mongorestore -d sandeepjain c:/data/vsit/sandeep
+show dbs
+Vidyalankar School of Information Technology
+Next Generation Technologies
+Practical #8
+Name Sandeep Jain Roll Number 21302C0058
+Subject/Course: NGT
+Topic Java and MongoDB
+Java & MongoDB
+Connecting Java with MongoDB and inserting, retrieving, updating and deleting
+Code in Netbeans
+Code for main class
+package practical8;
+import com.mongodb.MongoClient;
+public class Practical8 {
+ public static void main(String[] args) {
+ // TODO code application logic here
+ MongoClient mongo=new MongoClient("Localhost",27017);
+ System.out.println("Connect to the server successfully");
+ }
+}
+Code for Insert class
+package practical8;
+import com.mongodb.MongoClient;
+import com.mongodb.client.MongoCollection;
+import com.mongodb.client.MongoDatabase;
+import org.bson.Document;
+public class Insert {
+ public static void main(String []agrs){
+ MongoClient mongo=new MongoClient("localhost",27017);
+ System.out.println("Coonect to the server successfully");
+ MongoDatabase Database=mongo.getDatabase("mydb");
+ MongoCollection<Document> collection=Database.getCollection("sampleCollection");
+ System.out.println("Collection sampleCollection selected successfully");
+Vidyalankar School of Information Technology
+ Document document=new Document("id",1);
+ document.append("name","abc");
+ document.append("gender","M");
+ collection.insertOne(document);
+ System.out.println("Document insert successfully");
+ }
+}
+use mydb
+show dbs
+show collections
+db.sampleCollection.find().pretty()
+Code for updated class
+package practical8;
+import com.mongodb.BasicDBObject;
+import com.mongodb.DB;
+import com.mongodb.DBCollection;
+import com.mongodb.DBObject;
+import com.mongodb.MongoClient;
+import com.mongodb.WriteResult;
+public class update {
+ public static void main(String [] args) {
+ MongoClient mongo=new MongoClient("localhost",27017);
+ DB db=mongo.getDB("mydb");
+ DBCollection col=db.getCollection("sampleCollection");
+ DBObject query=new BasicDBObject("id",1);
+ DBObject update=new BasicDBObject();
+ update.put("$set", new BasicDBObject ("name","xyvz"));
+ WriteResult result=col.update(query,update);
+Vidyalankar School of Information Technology
+ mongo.close();
+ }}
+Command in mongo
+Use mydb
+Show dbs
+Show collections
+Db.sampleCollections
+Code for delete class
+package practical8;
+import com.mongodb.MongoClient;
+import com.mongodb.client.MongoCollection;
+import com.mongodb.client.MongoDatabase;
+import com.mongodb.client.model.Filters;
+import org.bson.Document ;
+public class delete{
+ public static void main(String[] args) {
+MongoClient mongo=new MongoClient ("localhost ",27017);
+System. out.println ("Connect to the server successfully");
+MongoDatabase database=mongo.getDatabase("mydb");
+MongoCollection<Document> collection=database.getCollection("sampleColleprion");
+collection.deleteOne (Filters.eq("1d", 1));
+System.out.println ("Document deleted sucosssfully");
+ }
+}
+output
+Vidyalankar School of Information Technology
+Code for show class
+import com.mongodb.MongoClient;
+import com.mongodb.client.FindIterable;
+import com.mongodb.client.MongoCollection;
+import com.mongodb.client.MongoDatabase;
+import java.util.Iterator;
+import org.bson. Document;
+public class show {
+public static void main (String[] args) {
+MongoClient mongo=new MongoClient("localhost",27017);
+System.out.println ("Connect to the server successfully");
+MongoDatabase database=mongo.getDatabase("mydb");
+MongoCollection<Document> collection=database.getCollection("sampleCollections");
+FindIterable<Document> iterDoc=collection.find();
+Iterator it=iterDoc.iterator();
+while(it.hasNext()){
+ System.out.println(it.next());
+}}}
+Output
+Vidyalankar School of Information Technology
+Vidyalankar School of Information Technology
+Next Generation Technologies
+Practical #11
+Name Sandeep Jain Roll Number 21302C0058
+Subject/Course: NGT
+Topic PHP and MongoDB
+PHP and MongoDB
+Connecting PHP with MongoDB and Inserting, deleting, retrieving and updating
+C:\xmapp\php\ext----download php.dill file
+C:\xmapp\htdocs ----download insert.php , mydb.php
+C:\xmapp\php.ini open than extension =mongodb line 927
+And services off of world wide web
+Localhost/mydb.php to check mongodb
+Code of Insert
+<?php
+// connect to mongodb
+$m = new MongoDB\Driver\Manager("mongodb://localhost:27017"); //contention
+echo "Connection to database successfully"; //print output
+$bulk = new MongoDB\Driver\BulkWrite; //write to many document
+$document1 = ['title' => 'one'];
+$document2 = ['id' => '01', 'title' => 'two'];
+$document3 = ['id' => '02', 'title' => 'three'];
+$id1 = $bulk->insert($document1);
+$id2 = $bulk->insert($document2);
+$id3 = $bulk->insert($document3);
+$result = $m->executeBulkWrite('mydd5.data', $bulk);
+echo "Document inserted successfully";
+?>
+Vidyalankar School of Information Technology
+Output for insert
+localhost/insert.php
+show dbs
+use mydd5
+show collections
+db.data.find().pretty()
+Code of select or retrieving
+<?php
+$m = new MongoDB\Driver\Manager("mongodb://localhost:27017");
+echo "Connection to database successfully";
+$query = new MongoDB\Driver\Query([], []);
+Vidyalankar School of Information Technology
+$cursor = $m->executeQuery('mydd5.data', $query);
+foreach ($cursor as $document)
+{
+if (property_exists($document, 'id')) {
+echo $document->id;
+echo "<br/>";
+} else {
+echo "ID not found for this document.<br/>";
+}
+if (property_exists($document, 'title')) {
+echo $document->title;
+echo "<br/>";
+} else {
+echo "Title not found for this document.<br/>";
+}
+}
+?>
+Output of select or retrieving
+Code of update
+<?php
+Vidyalankar School of Information Technology
+// connect to mongodb
+$m = new MongoDB\Driver\Manager("mongodb://localhost:27017"); //contention
+echo "Connection to database successfully"; //print output
+$bulk = new MongoDB\Driver\BulkWrite; //write to many document
+$bulk->update(
+['id'=>'02'],['$set'=>['title'=>'sandeep']],
+);
+$result = $m->executeBulkWrite('mydd5.data', $bulk);
+echo "Document updated successfully";
+?>
+Output if update
+db.data.find(),pretty()
+Vidyalankar School of Information Technology
+Code of delete
+<?php
+// connect to mongodb
+$m = new MongoDB\Driver\Manager("mongodb://localhost:27017"); //contention
+echo "Connection to database successfully"; //print output
+$bulk = new MongoDB\Driver\BulkWrite; //write to many document
+$bulk->delete(
+['id'=>'01']
+);
+$result = $m->executeBulkWrite('mydd5.data', $bulk);
+echo "Document Deleted successfully";
+?>
+Output if delete
+Vidyalankar School of Information Technology
+Vidyalankar School of Information Technology
+Next Generation Technologies
+Practical #10
+Name Sandeep Jain Roll Number 21302C0058
+Subject/Course: NGT
+Topic Python and Mongodb
+Python and Mongodb
+Code in Python
+Pip install pymongo
+[A] Insert records
+Code
+from pymongo import MongoClient
+client =MongoClient('localhost:27017')
+db=client.EmployeeData
+def insert():
+ try:
+ employeeId=input("\n Enter the Employee Id \n")
+ employeeName=input("\n Enter the name of Employee \n")
+ employeeAge=input("\n Enter the Age of Employee \n")
+ employeeCountry=input("\n Enter the country of Employee Id \n")
+ db.Employees.insert_one(
+ {
+ "id":employeeId,
+ "name":employeeName,
+ "age":employeeAge,
+ "Country":employeeCountry
+ })
+ print("\n Inserted data successfully \n")
+ except Exception as e:
+ print(str(e))
+insert()
+Output
+Vidyalankar School of Information Technology
+Use EmployeeData
+db.Employees.find()
+[B] Update records
+from pymongo import MongoClient
+client =MongoClient('localhost:27017')
+db=client.EmployeeData
+def update():
+ try:
+ employeeName=input("\n Enter the name of Employee \n")
+ employeeAge=input("\n Enter the Age of Employee \n")
+ employeeCountry=input("\n Enter the country of Employee Id \n")
+ db.Employees.update_one(
+ {
+ "name":employeeName},
+ {
+ "$set":{
+ "age":employeeAge,
+ "Country":employeeCountry
+ }
+ })
+ print("\n record update data successfully \n")
+ except Exception as e:
+ print(str(e))
+update()
+Output
+Vidyalankar School of Information Technology
+[C] Delete records
+Code
+from pymongo import MongoClient
+client =MongoClient('localhost:27017')
+db=client.EmployeeData
+def delete():
+ try:
+ name=input("\n Enter the name of Employee to delete \n")
+ db.Employees.delete_many({"name":name})
+ print("\n record delete data successfully \n")
+ except Exception as e:
+ print(str(e))
+delete()
+Output
+[D] Retrieve records
+Code
+from pymongo import MongoClient
+client = MongoClient ('localhost:27017')
+db = client.EmployeeData
+def read():
+ try:
+ empCol=db.Employees.find()
+ print ("\n All data form EmployeeData Database\n")
+ for emp in empCol:
+ print (emp)
+ except Exception as e:
+Vidyalankar School of Information Technology
+ print (str (e))
+read ()
+Output
