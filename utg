@@ -1,7 +1,7 @@
 Vidyalankar School of Information Technology
 Next Generation Technologies
 Practical #1
-Name Sandeep Jain Roll Number 21302C0058
+XXX!@
 Subject/Course: NGT
 Topic jQuery
 jQuery Basic & Events
@@ -110,7 +110,7 @@ Vidyalankar School of Information Technology
 Output
 Next Generation Technologies
 Practical #2
-Name Sandeep Jain Roll Number 21302C0058
+XXX!@
 Subject/Course: NGT
 Topic jQuery Advanced
 jQuery Animations and Callback
@@ -221,7 +221,7 @@ Vidyalankar School of Information Technology
 Output
 Next Generation Technologies
 Practical #3
-Name Sandeep Jain Roll Number 21302C0058
+XXX!@
 Subject/Course: NGT
 Topic JSON
 Vidyalankar School of Information Technology
@@ -292,7 +292,7 @@ mongoimport –db college –-collection student –-file”path”
 Vidyalankar School of Information Technology
 Next Generation Technologies
 Practical #4
-Name Sandeep Jain Roll Number 21302C0058
+XXX!@
 Subject/Course: NGT
 Topic MongoDB Basics
 MongoDB Basic Queries
@@ -382,7 +382,7 @@ db.emp.find({"City":"Pune"}).count()
 Output
 Next Generation Technologies
 Practical #5
-Name Sandeep Jain Roll Number 21302C0058
+XXX!@
 Subject/Course: NGT
 Topic MongoDB Advanced Search Queries
 MongoDB Advanced Search Queries
@@ -510,7 +510,7 @@ db.restaurant.find({"address.coord.1":{$gt:42,$lte:52}},{"restaurant_id":1,"name
 etty()
 Next Generation Technologies
 Practical #6
-Name Sandeep Jain Roll Number 21302C0058
+XXX!@
 Subject/Course: NGT
 Topic MongoDB Aggregate Queries
 MongoDB Aggregate Queries
@@ -574,7 +574,7 @@ Output
 Next Generation Technologies
 Practical #7
 Vidyalankar School of Information Technology
-Name Sandeep Jain Roll Number 21302C0058
+XXX!@
 Subject/Course: NGT
 Topic Replication,Backup and Restore
 Replication, Backup and Restore
@@ -636,7 +636,7 @@ show dbs
 Vidyalankar School of Information Technology
 Next Generation Technologies
 Practical #8
-Name Sandeep Jain Roll Number 21302C0058
+XXX!@
 Subject/Course: NGT
 Topic Java and MongoDB
 Java & MongoDB
@@ -744,7 +744,7 @@ Vidyalankar School of Information Technology
 Vidyalankar School of Information Technology
 Next Generation Technologies
 Practical #11
-Name Sandeep Jain Roll Number 21302C0058
+XXX!@
 Subject/Course: NGT
 Topic PHP and MongoDB
 PHP and MongoDB
@@ -833,7 +833,7 @@ Vidyalankar School of Information Technology
 Vidyalankar School of Information Technology
 Next Generation Technologies
 Practical #10
-Name Sandeep Jain Roll Number 21302C0058
+XXX!@
 Subject/Course: NGT
 Topic Python and Mongodb
 Python and Mongodb
